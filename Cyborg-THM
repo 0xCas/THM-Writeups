@@ -1,0 +1,50 @@
+Try Hack Me -: Cyborg
+Compromise the machine and read the user.txt and root.txt
+
+Q1:
+Scan the machine, how many ports are open?
+
+So for this one i ran NMAP -sS -sC -T4 {IP} command to find out what ports are open
+
+(NMAP SS)
+
+
+```
+Anwser -: 2
+```
+
+Q2:
+What service is running on port 22?
+
+This is a very simple question as anyone that is familiar with Port numbers will know its protocol
+but if you are not familiar what port 22 is the scan you performed earlier will reveal the anwser to you 
+```
+Anwser -: ssh
+```
+
+Q3:
+What service is running on port 80?
+
+Yet again knowledge with what protocol has what Port Number is a big help here, but yet again the scan you did earlier will tel you what it is.
+
+```
+Anwser -: http
+```
+
+
+
+As we now know what ports it has open you can go and check them out!
+for instance we know SSH will require us to enter password so we can leave that one alone, BUT 
+port 80 is up so we can go onto our browser type IP into it and see what the result is...
+
+(BROWSER SS)
+
+
+Q4:
+What is the user.txt flag?
+
+For this one i ran Gobuster to see what directories are avalible for our site
+
+(GOBUSTER SS)
+
+now we know we have ADMIN, ETC and Server-Status avalible so lets start with ADMIN
